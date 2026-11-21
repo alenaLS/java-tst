@@ -1,0 +1,14 @@
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+dependencies {
+    testImplementation 'org.testng:testng:7.5.1'
+    implementation("org.seleniumhq.selenium:selenium-java:3.141.59")
+    implementation 'commons-io:commons-io:2.16.1'
+    implementation 'io.github.bonigarcia:webdrivermanager:5.9.2'
+}
+test {
+    useTestNG()
+}

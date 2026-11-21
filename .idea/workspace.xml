@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="030b3e29-2305-439f-bd8b-2eed72442d94" name="Changes" comment="add tests for Point.java">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/sandbox.iml" beforeDir="false" />
+    <list default="true" id="030b3e29-2305-439f-bd8b-2eed72442d94" name="Changes" comment="add delta for sandbox">
+      <change afterPath="$PROJECT_DIR$/.idea/modules/addressbook-web-tests.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/addressbook-web-tests.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +16,7 @@
   </component>
   <component name="ChangesViewManager">
     <option name="groupingKeys">
+      <option value="directory" />
       <option value="module" />
     </option>
   </component>
@@ -117,10 +117,11 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "dev-feature-1",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/Users/akarpova/IdeaProjects/java-tst/sandbox/src/main/java",
-    "last_opened_file_path": "C:/Users/akarpova/IdeaProjects/addressbook-web-tests",
+    "last_opened_file_path": "C:/Users/akarpova/IdeaProjects/java-tst/addressbook-web-tests",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -310,7 +311,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794555911464</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="add delta for sandbox">
+      <option name="closed" value="true" />
+      <created>1795259952828</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1795259952828</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -333,6 +342,7 @@
     <MESSAGE value="add dependencies testng" />
     <MESSAGE value="add firstTest" />
     <MESSAGE value="add tests for Point.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="add tests for Point.java" />
+    <MESSAGE value="add delta for sandbox" />
+    <option name="LAST_COMMIT_MESSAGE" value="add delta for sandbox" />
   </component>
 </project>
