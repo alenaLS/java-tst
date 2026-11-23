@@ -5,47 +5,40 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 import ru.stqa.pft.addressbook.model.ContactData;
 
-public class ContactHelper {
-    private WebDriver wd;
+public class ContactHelper extends HelperBase {
 
     public ContactHelper(WebDriver wd) {
-        this.wd = wd;
+        super(wd);
     }
 
     public void fillContactForm(ContactData contactData) {
-      wd.findElement(By.name("firstname")).click();
-      wd.findElement(By.name("firstname")).clear();
-      wd.findElement(By.name("firstname")).sendKeys(contactData.getFirstname());
-      wd.findElement(By.name("middlename")).click();
-      wd.findElement(By.name("middlename")).clear();
-      wd.findElement(By.name("middlename")).sendKeys(contactData.getMiddlename());
-      wd.findElement(By.name("lastname")).click();
-      wd.findElement(By.name("lastname")).clear();
-      wd.findElement(By.name("lastname")).sendKeys(contactData.getLastname());
-      wd.findElement(By.name("nickname")).click();
-      wd.findElement(By.name("nickname")).clear();
-      wd.findElement(By.name("nickname")).sendKeys(contactData.getNick());
-      wd.findElement(By.name("company")).click();
-      wd.findElement(By.name("company")).clear();
-      wd.findElement(By.name("company")).sendKeys(contactData.getCompany());
-      wd.findElement(By.name("address")).click();
-      wd.findElement(By.name("address")).clear();
-      wd.findElement(By.name("address")).sendKeys(contactData.getAddress());
-      wd.findElement(By.name("home")).click();
-      wd.findElement(By.name("home")).clear();
-      wd.findElement(By.name("home")).sendKeys(contactData.getNumber());
-      wd.findElement(By.name("email")).click();
-      wd.findElement(By.name("email")).clear();
-      wd.findElement(By.name("email")).sendKeys(contactData.getEmail());
-      wd.findElement(By.name("new_group")).click();
+        typeName(By.name("firstname"), contactData.getFirstname());
+        typeName(By.name("middlename"), contactData.getMiddlename());
+        typeName(By.name("lastname"), contactData.getLastname());
+        typeName(By.name("nickname"), contactData.getNick());
+        typeName(By.name("company"), contactData.getCompany());
+        typeName(By.name("address"), contactData.getAddress());
+        typeName(By.name("home"), contactData.getNumber());
+        typeName(By.name("email"), contactData.getEmail());
+        click(By.name("new_group"));
       new Select(wd.findElement(By.name("new_group"))).selectByVisibleText("test1");
     }
 
+    public void click(By locator) {
+        wd.findElement(locator).click();
+    }
+
+    public void typeName(By locator, String text) {
+        click(locator);
+        wd.findElement(locator).clear();
+        wd.findElement(locator).sendKeys(text);
+    }
+
     public void goToCreation() {
-      wd.findElement(By.linkText("add new")).click();
+        click(By.linkText("add new"));
     }
 
     public void enterContact() {
-      wd.findElement(By.xpath("//div[@id='content']/form/input[21]")).click();
+        click(By.xpath("//div[@id='content']/form/input[21]"));
     }
 }
